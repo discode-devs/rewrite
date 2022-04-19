@@ -141,7 +141,7 @@ END
 
   @lang.command()
   async def c(self, ctx):
-    """Information on BASIC."""
+    """Information on C."""
     embed = Embed(
       title="C",
       description="A father with hundreds of children.",
