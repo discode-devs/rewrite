@@ -18,7 +18,7 @@ class lang(commands.Cog):
   
   @lang.command()
   async def assembly(self, ctx):
-    """Information on the Assembly language."""
+    """Information on the Assembly."""
     embed = Embed(
       title="Assembly",
       description="Super, duper old.",
@@ -85,6 +85,56 @@ msg:
       name="Sources",
       value="https://en.wikipedia.org/wiki/Assembly_language",
       inline=False
+    )
+    await ctx.respond(file=file, embed=embed)
+
+  @lang.command()
+  async def basic(self, ctx):
+    embed = Embed(
+      title="Assembly",
+      description="",
+      color=0x404eed,
+      timestamp=datetime.datetime.now()
+    )
+    file = discord.File("assets/langs/basic.jpg")
+    embed.set_thumbnail(url="attachment://basic.jpg")
+    embed.set_footer(icon_url=self.bot.user.display_avatar.url, text="Discode")
+    embed.add_field(
+      name="What is it?",
+      value="BASIC is a family of general-purpose, high-level programming languages whose design goal is to create programs that are simple to understand, and to be easy to modify or extend. BASIC was originally designed as a way to teach children to program, but it has since become a popular programming language for many years. It was created by John G. Kemeny and Thomas E. Kurtz in 1964.",
+      inline=False
+    )
+    embed.add_field(
+      name="Advantages",
+      value="""
+      - Easy to learn
+      - Very easy to understand
+      - Size is small
+      - Imperative
+      """,
+      inline=False
+    )
+    embed.add_field(
+      name="Code Example",
+      value="""
+```basic
+PRINT "Hello, World!"
+END
+```
+      """,
+      inline=False
+    )
+    embed.add_field(
+      name="Learn",
+      value="https://www.youtube.com/watch?v=dwVAR6HClmI",
+      inline=False
+    )
+    embed.add_field(
+      name="Sources",
+      value="""
+      https://en.wikipedia.org/wiki/BASIC
+      https://www.uopeople.edu/blog/6-reasons-why-you-should-learn-basic-programming/
+      """,
     )
     await ctx.respond(file=file, embed=embed)
 
