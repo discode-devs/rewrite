@@ -2,8 +2,6 @@
 
 A bot to supplant your coding questions
 
----
-
 <img title="" src="https://raw.githubusercontent.com/discode-devs/rewrite/main/assets/botatar.png" alt="" height="" width="281" data-align="left">
 
 
