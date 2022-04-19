@@ -14,11 +14,11 @@ class lang(commands.Cog):
   def __init__(self, bot):
     self.bot=bot
 
-  lang = SlashCommandGroup("languages", "Commands related to languages.")
+  lang = SlashCommandGroup("language", "Commands related to languages.")
   
   @lang.command()
   async def assembly(self, ctx):
-    """Information on the Assembly."""
+    """Information on Assembly."""
     embed = Embed(
       title="Assembly",
       description="Super, duper old.",
@@ -36,13 +36,13 @@ class lang(commands.Cog):
     embed.add_field(
       name="Advantages",
       value="""
-      - Faster in speed
-      - Extremely optimized to use only necessary resources
-      - Efficient use of memory
-      - High level of control
-      - Access registers and memory in hardware
-      - Don't need to rely on compilers to optimize the code
-      - Assemmbler bugs are much easier to identify and fix compared to compiler bugs
+        - Fast in speed
+        - Extremely optimized to use only necessary resources
+        - Efficient use of memory
+        - High level of control
+        - Access registers and memory in hardware
+        - Don't need to rely on compilers to optimize the code
+        - Assemmbler bugs are much easier to identify and fix compared to compiler bugs
       """,
       inline=False
     )
@@ -90,9 +90,10 @@ msg:
 
   @lang.command()
   async def basic(self, ctx):
+    """Information on BASIC."""
     embed = Embed(
       title="Assembly",
-      description="",
+      description="Super, duper old.",
       color=0x404eed,
       timestamp=datetime.datetime.now()
     )
@@ -107,10 +108,10 @@ msg:
     embed.add_field(
       name="Advantages",
       value="""
-      - Easy to learn
-      - Very easy to understand
-      - Size is small
-      - Imperative
+        - Easy to learn
+        - Very easy to understand
+        - Size is small
+        - Imperative
       """,
       inline=False
     )
@@ -134,6 +135,71 @@ END
       value="""
       https://en.wikipedia.org/wiki/BASIC
       https://www.uopeople.edu/blog/6-reasons-why-you-should-learn-basic-programming/
+      """,
+    )
+    await ctx.respond(file=file, embed=embed)
+
+  @lang.command()
+  async def c(self, ctx):
+    """Information on BASIC."""
+    embed = Embed(
+      title="C",
+      description="A father with hundreds of children.",
+      color=0x404eed,
+      timestamp=datetime.datetime.now()
+    )
+    file = discord.File("assets/langs/c.jpg")
+    embed.set_thumbnail(url="attachment://c.jpg")
+    embed.set_footer(icon_url=self.bot.user.display_avatar.url, text="Discode")
+    embed.add_field(
+      name="What is it?",
+      value="C is a general purpose, procedural programming language supporting structured programming, lexical variable scope, and recursion. It was developed by Dennis Ritchie between 1969 and 1973.",
+      inline=False
+    )
+    embed.add_field(
+      name="Advantages",
+      value="""
+        - Powerful and efficient
+        - Built-in functions
+        - Great for system programming
+        - Building block for many other languages
+        - Portable
+        - Middle-level language
+        - Very fast
+        - Very extensible
+      """,
+      inline=False
+    )
+    embed.add_field(
+      name="Code Example",
+      value="""
+```c
+#include <stdio.h>
+
+int main(void){
+  printf("Hello, World!\\n");
+  return 0;
+}
+```
+      """,
+      inline=False
+    )
+    embed.add_field(
+      name="Learn",
+      value="""
+        https://www.codecademy.com/learn/learn-c
+        https://www.programiz.com/c-programming
+        https://www.w3schools.in/c-tutorial/
+        https://www.sololearn.com/learning/1089
+
+      """,
+      inline=False
+    )
+    embed.add_field(
+      name="Sources",
+      value="""
+      https://en.wikipedia.org/wiki/C_(programming_language)
+      https://dare2compete.com/blog/advantages-and-disadvantages-of-c-programming-language
       """,
     )
     await ctx.respond(file=file, embed=embed)
