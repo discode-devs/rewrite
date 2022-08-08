@@ -13,7 +13,7 @@ The original Discode bot is written in C. As much as I like the Concord library.
 
 ### Set up project
 1. Clone and move into the repo (`git clone https://github.com/discode-devs/rewrite && rewrite`)
-2. Create a .env file in the root of the project with the text: `TOKEN=YOUR-BOT-TOKEN`
+2. Create a .env file in the root of the project with the text: `TOKEN=YOUR-BOT-TOKEN` and `GUILD=YOUR-GUILD-ID`
 
 ### Run
 There two things you could do here. You could run it with `gradle run`. Or you could run `gradle build`, copy the .env to `build/libs`, go to `build/libs`, and then run `discode-<VERSION>-standalone.jar`.
