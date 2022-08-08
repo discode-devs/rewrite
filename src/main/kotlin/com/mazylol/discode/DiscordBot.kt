@@ -11,12 +11,12 @@ object DiscordBot {
     @Throws(LoginException::class, InterruptedException::class, Exception::class)
     @JvmStatic
     fun main(args: Array<String>) {
-        val dotenv = Dotenv.configure().load();
+        val dotenv = Dotenv.configure().load()
         val bot = JDABuilder.createDefault(dotenv.get("TOKEN"))
             .setActivity(Activity.watching("you type in that stupid stackoverflow question"))
             .addEventListeners(LangDropDown())
             .build().awaitReady()
-        val guild = bot.getGuildById("823309399317676083")
+        val guild = bot.getGuildById(dotenv.get("GUILD"))
         guild?.updateCommands()?.addCommands(
             Commands.slash("language", "Information about a language")
         )?.queue()
