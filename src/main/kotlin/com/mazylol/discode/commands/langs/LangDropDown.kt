@@ -38,15 +38,12 @@ class LangDropDown : ListenerAdapter() {
     }
 
     override fun onSelectMenuInteraction(event: SelectMenuInteractionEvent) {
-       val sel = event.values[0]
-       if (sel.equals("asm")) {
-           asmembed(event)
-       } else if (sel.equals("basic")) {
-           basicembed(event)
-       } else if (sel.equals("c")) {
-           cembed(event)
-       } else if (sel.equals("cpp")) {
-           cppembed(event)
-       }
+        when(event.values[0]) {
+            "asm" -> asmembed(event)
+            "basic" -> basicembed(event)
+            "c" -> cembed(event)
+            "cpp" -> cppembed(event)
+            else -> event.reply("Invalid (somehow)")
+        }
     }
 }
