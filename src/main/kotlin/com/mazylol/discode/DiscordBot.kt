@@ -13,7 +13,7 @@ object DiscordBot {
     fun main(args: Array<String>) {
         val dotenv = Dotenv.configure().load()
         val bot = JDABuilder.createDefault(dotenv.get("TOKEN"))
-            .setActivity(Activity.watching("you type in that stupid stackoverflow question"))
+            .setActivity(Activity.watching("you copy/paste"))
             .addEventListeners(LangDropDown())
             .build().awaitReady()
         val guild = bot.getGuildById(dotenv.get("GUILD"))
