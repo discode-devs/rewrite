@@ -9,7 +9,6 @@ object C {
         val eb = EmbedBuilder()
         eb.setTitle("C")
         eb.setDescription("The grandfather of everything else.")
-        eb.setFooter("Discode", "https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/botatar.png")
         eb.setThumbnail("https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/langs/c.jpg")
         eb.addField("Overview", "C is a general purpose, procedural programming language supporting structured programming, lexical variable scope, and recursion. It was developed by Dennis Ritchie between 1969 and 1973.", false)
         eb.addField("Features", "- Powerful and efficient\n- Built-in functions\n- Great for system programming\n- Building block for many other languages\n- Portable\n- Middle-level language\n- Very fast\n- Very extensible", false)
@@ -18,6 +17,7 @@ object C {
         eb.addField("Sources", "https://en.wikipedia.org/wiki/C_(programming_language)\nhttps://dare2compete.com/blog/advantages-and-disadvantages-of-c-programming-language", false)
         eb.setTimestamp(Date().toInstant())
         eb.setColor(5793266)
+        eb.setFooter("Discode", "https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/botatar.png")
         event.replyEmbeds(eb.build()).queue()
     }
 }

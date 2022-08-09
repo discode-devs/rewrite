@@ -9,7 +9,6 @@ object CPP {
         val eb = EmbedBuilder()
         eb.setTitle("C++")
         eb.setDescription("The grandfather of everything else. But with extra things.")
-        eb.setFooter("Discode", "https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/botatar.png")
         eb.setThumbnail("https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/langs/cpp.png")
         eb.addField("Overview", "C++ is a general-purpose programming language that is a superset of C. It is well suited for games and desktop applications. It was created in 1985 by Bjarne Stroustrup.", false)
         eb.addField("Features", "- Powerful and efficient\n- Built-in functions\n- Great for system programming\n- Building block for many other languages\n- Portable\n- Middle-level language\n- Very fast\n- Very extensible\n- Memory efficient\n- Object oriented programming", false)
@@ -18,6 +17,7 @@ object CPP {
         eb.addField("Sources", "https://en.wikipedia.org/wiki/C%2B%2B\nhttps://techvidvan.com/tutorials/cpp-pros-and-cons/", false)
         eb.setTimestamp(Date().toInstant())
         eb.setColor(5793266)
+        eb.setFooter("Discode", "https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/botatar.png")
         event.replyEmbeds(eb.build()).queue()
     }
 }
