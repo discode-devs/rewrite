@@ -1,6 +1,7 @@
 package com.mazylol.discode.commands.langs
 
 import com.mazylol.discode.commands.langs.C.cembed
+import com.mazylol.discode.commands.langs.CPP.cppembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
@@ -29,12 +30,11 @@ class LangDropDown : ListenerAdapter() {
     }
 
     override fun onSelectMenuInteraction(event: SelectMenuInteractionEvent) {
-        val sel = event.values[0]
-
+       val sel = event.values[0]
        if (sel.equals("c")) {
            cembed(event)
        } else if (sel.equals("cpp")) {
-           event.reply("C++!!!!").queue()
+           cppembed(event)
        }
     }
 }
