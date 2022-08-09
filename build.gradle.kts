@@ -17,7 +17,6 @@ dependencies {
     implementation("net.dv8tion:JDA:5.0.0-alpha.17") {
         exclude(module = "opus-java")
     }
-    implementation("com.konghq:unirest-java:3.13.10")
     implementation("io.github.cdimascio:dotenv-java:2.2.4")
 }
 
