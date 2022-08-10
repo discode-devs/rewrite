@@ -5,6 +5,8 @@ import com.mazylol.discode.commands.langs.Basic.basicembed
 import com.mazylol.discode.commands.langs.C.cembed
 import com.mazylol.discode.commands.langs.CPP.cppembed
 import com.mazylol.discode.commands.langs.CSS.cssembed
+import com.mazylol.discode.commands.langs.Fortran.fortranembed
+import com.mazylol.discode.commands.langs.HTML.htmlembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
@@ -31,6 +33,12 @@ class LangDropDown : ListenerAdapter() {
                 ).addOptions(SelectOption.of("CSS", "css")
                     .withDescription("The CSS language")
                     .withEmoji(Emoji.fromFormatted("<:lang_css:1006788608235163679>"))
+                ).addOptions(SelectOption.of("Fortran", "fortran")
+                    .withDescription("The Fortran language")
+                    .withEmoji(Emoji.fromFormatted("<:lang_fortran:1007006657064214639>"))
+                ).addOptions(SelectOption.of("HTML", "html")
+                    .withDescription("The HTML language")
+                    .withEmoji(Emoji.fromFormatted("<:lang_html:1007015250387804200>"))
                 )
                 .build()
 
@@ -48,6 +56,8 @@ class LangDropDown : ListenerAdapter() {
             "c" -> cembed(event)
             "cpp" -> cppembed(event)
             "css" -> cssembed(event)
+            "fortran" -> fortranembed(event)
+            "html" -> htmlembed(event)
             else -> event.reply("Invalid (somehow)")
         }
     }
