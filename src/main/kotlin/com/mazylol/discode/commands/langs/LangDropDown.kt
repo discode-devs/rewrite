@@ -4,6 +4,7 @@ import com.mazylol.discode.commands.langs.Asm.asmembed
 import com.mazylol.discode.commands.langs.Basic.basicembed
 import com.mazylol.discode.commands.langs.C.cembed
 import com.mazylol.discode.commands.langs.CPP.cppembed
+import com.mazylol.discode.commands.langs.CSS.cssembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
@@ -27,6 +28,9 @@ class LangDropDown : ListenerAdapter() {
                 ).addOptions(SelectOption.of("C++", "cpp")
                     .withDescription("The C++ language")
                     .withEmoji(Emoji.fromFormatted("<:lang_cpp:1006057883496095865>"))
+                ).addOptions(SelectOption.of("CSS", "css")
+                    .withDescription("The CSS language")
+                    .withEmoji(Emoji.fromFormatted("<:lang_css:1006788608235163679>"))
                 )
                 .build()
 
@@ -43,6 +47,7 @@ class LangDropDown : ListenerAdapter() {
             "basic" -> basicembed(event)
             "c" -> cembed(event)
             "cpp" -> cppembed(event)
+            "css" -> cssembed(event)
             else -> event.reply("Invalid (somehow)")
         }
     }
