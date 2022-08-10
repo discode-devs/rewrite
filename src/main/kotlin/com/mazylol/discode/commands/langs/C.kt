@@ -2,7 +2,7 @@ package com.mazylol.discode.commands.langs
 
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
-import java.util.*
+import java.util.Date
 
 object C {
     fun cembed(event: SelectMenuInteractionEvent) {
