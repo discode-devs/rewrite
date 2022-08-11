@@ -1,5 +1,6 @@
 package com.mazylol.discode
 
+import com.mazylol.discode.commands.info.Help
 import com.mazylol.discode.commands.langs.LangDropDown
 import io.github.cdimascio.dotenv.Dotenv
 import net.dv8tion.jda.api.JDABuilder
@@ -14,11 +15,12 @@ object DiscordBot {
         val dotenv = Dotenv.configure().load()
         val bot = JDABuilder.createDefault(dotenv.get("TOKEN"))
             .setActivity(Activity.watching("you copy/paste"))
-            .addEventListeners(LangDropDown())
+            .addEventListeners(Help(), LangDropDown())
             .build().awaitReady()
         val guild = bot.getGuildById(dotenv.get("GUILD"))
         guild?.updateCommands()?.addCommands(
-            Commands.slash("language", "Information about a language")
+            Commands.slash("language", "Information about a language"),
+            Commands.slash("help", "Help screen")
         )?.queue()
     }
 }
