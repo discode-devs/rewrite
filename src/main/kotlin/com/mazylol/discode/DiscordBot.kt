@@ -1,5 +1,6 @@
 package com.mazylol.discode
 
+import com.mazylol.discode.commands.frameworks.FrameworkDropDown
 import com.mazylol.discode.commands.info.Help
 import com.mazylol.discode.commands.langs.LangDropDown
 import io.github.cdimascio.dotenv.Dotenv
@@ -15,10 +16,11 @@ object DiscordBot {
         val dotenv = Dotenv.configure().load()
         val bot = JDABuilder.createDefault(dotenv.get("TOKEN"))
             .setActivity(Activity.watching("you copy/paste"))
-            .addEventListeners(Help(), LangDropDown())
+            .addEventListeners(FrameworkDropDown() ,Help(), LangDropDown())
             .build().awaitReady()
         val guild = bot.getGuildById(dotenv.get("GUILD"))
         guild?.updateCommands()?.addCommands(
+            Commands.slash("framework", "Information about a framework"),
             Commands.slash("language", "Information about a language"),
             Commands.slash("help", "Help screen")
         )?.queue()
