@@ -15,7 +15,7 @@ object DiscordBot {
     @JvmStatic
     fun main(args: Array<String>) {
         val dotenv = Dotenv.configure().load()
-        val bot = JDABuilder.createDefault(dotenv.get("TOKEN"))
+        val bot = JDABuilder.createDefault(dotenv.get("DEVTOKEN"))
             .setActivity(Activity.watching("you copy/paste"))
             .addEventListeners(FrameworkDropDown() ,Help(), LangDropDown(), PersonDropDown())
             .build().awaitReady()
@@ -26,5 +26,14 @@ object DiscordBot {
             Commands.slash("language", "Information about a language"),
             Commands.slash("person", "Information about a person")
         )?.queue()
+        /*
+        bot.updateCommands().addCommands(
+            Commands.slash("framework", "Information about a framework"),
+            Commands.slash("help", "Help screen"),
+            Commands.slash("language", "Information about a language"),
+            Commands.slash("person", "Information about a person")
+        ).queue()
+
+         */
     }
 }
