@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.mazylol.discode"
-version = "0.9"
+version = "1.0"
 
 repositories {
     mavenCentral()
