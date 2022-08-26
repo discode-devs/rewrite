@@ -7,14 +7,14 @@ plugins {
 }
 
 group = "com.mazylol.discode"
-version = "1.0"
+version = "1.1"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.0-alpha.17") {
+    implementation("net.dv8tion:JDA:5.0.0-alpha.18") {
         exclude(module = "opus-java")
     }
     implementation("io.github.cdimascio:dotenv-java:2.2.4")

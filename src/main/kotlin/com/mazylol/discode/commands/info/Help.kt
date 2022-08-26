@@ -3,8 +3,7 @@ package com.mazylol.discode.commands.info
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import net.dv8tion.jda.api.interactions.components.buttons.Button
-import java.util.*
+import java.util.Date
 
 class Help : ListenerAdapter() {
     override fun onSlashCommandInteraction(event : SlashCommandInteractionEvent) {
@@ -17,10 +16,7 @@ class Help : ListenerAdapter() {
             eb.setTimestamp(Date().toInstant())
             eb.setColor(5793266)
             eb.setFooter("Discode", "https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/botatar.png")
-            event.replyEmbeds(eb.build())
-                .addActionRow(Button.link("https://discode.mazylol.com", "Website"))
-                .addActionRow(Button.link("https://github.com/discode-devs/rewrite", "Source Code"))
-                .queue()
+            event.replyEmbeds(eb.build()).queue()
         }
     }
 }
