@@ -30,6 +30,7 @@ object DiscordBot {
         )?.queue()
         /*
         bot.updateCommands().addCommands(
+            Commands.slash("about", "General information about the bot"),
             Commands.slash("framework", "Information about a framework"),
             Commands.slash("help", "Help screen"),
             Commands.slash("language", "Information about a language"),
