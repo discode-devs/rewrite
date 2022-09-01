@@ -20,15 +20,6 @@ object DiscordBot {
             .setActivity(Activity.watching("you copy/paste"))
             .addEventListeners(About() ,FrameworkDropDown() ,Help(), LangDropDown(), PersonDropDown())
             .build().awaitReady()
-        val guild = bot.getGuildById(dotenv.get("GUILD"))
-        guild?.updateCommands()?.addCommands(
-            Commands.slash("about", "General information about the bot"),
-            Commands.slash("framework", "Information about a framework"),
-            Commands.slash("help", "Help screen"),
-            Commands.slash("language", "Information about a language"),
-            Commands.slash("person", "Information about a person")
-        )?.queue()
-        /*
         bot.updateCommands().addCommands(
             Commands.slash("about", "General information about the bot"),
             Commands.slash("framework", "Information about a framework"),
@@ -36,7 +27,5 @@ object DiscordBot {
             Commands.slash("language", "Information about a language"),
             Commands.slash("person", "Information about a person")
         ).queue()
-
-         */
     }
 }
