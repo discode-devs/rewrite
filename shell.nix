@@ -1,9 +1,8 @@
-let
-  pkgs = import <nixpkgs> {};
-
-in pkgs.mkShell rec {
+{ pkgs ? import <nixpkgs> {  } };
+with pkgs;
+mkShell {
   name = "discode-env";
-  buildInputs = with pkgs; [ git jdk jre gradle ];
+  buildInputs = [ git jdk jre gradle ];
   shellHook = ''
     export PS1='\n\[\033[1;34m\][${name}:\w]\$\[\033[0m\] '
   '';
