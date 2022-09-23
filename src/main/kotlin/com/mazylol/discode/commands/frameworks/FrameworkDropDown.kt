@@ -1,6 +1,7 @@
 package com.mazylol.discode.commands.frameworks
 
 import com.mazylol.discode.commands.frameworks.Angular.angularembed
+import com.mazylol.discode.commands.frameworks.Next.nextembed
 import com.mazylol.discode.commands.frameworks.React.reactembed
 import com.mazylol.discode.commands.frameworks.Svelte.svelteembed
 import com.mazylol.discode.commands.frameworks.Vue.vueembed
@@ -17,6 +18,8 @@ class FrameworkDropDown : ListenerAdapter() {
             val selectMenu = SelectMenu.create("choose-language")
                 .addOptions(SelectOption.of("Angular", "angular")
                     .withEmoji(Emoji.fromFormatted("<:framework_angular:1007363681350336612>"))
+                ).addOptions(SelectOption.of("Next", "next")
+                    .withEmoji(Emoji.fromFormatted("<:framework_next:1022680128163164224>"))
                 ).addOptions(SelectOption.of("React", "react")
                     .withEmoji(Emoji.fromFormatted("<:framework_react:1007363752997421056>"))
                 ).addOptions(SelectOption.of("Svelte", "svelte")
@@ -36,6 +39,7 @@ class FrameworkDropDown : ListenerAdapter() {
     override fun onSelectMenuInteraction(event: SelectMenuInteractionEvent) {
         when(event.values[0]) {
             "angular" -> angularembed(event)
+            "next" -> nextembed(event)
             "react" -> reactembed(event)
             "svelte" -> svelteembed(event)
             "vue" -> vueembed(event)
