@@ -18,7 +18,7 @@ object DiscordBot {
         val dotenv = Dotenv.configure().load()
         val bot = JDABuilder.createDefault(dotenv.get("DEVTOKEN"))
             .setActivity(Activity.watching("you copy/paste"))
-            .addEventListeners(About() ,FrameworkDropDown() ,Help(), LangDropDown(), PersonDropDown())
+            .addEventListeners(About(), FrameworkDropDown(), Help(), LangDropDown(), PersonDropDown())
             .build().awaitReady()
         bot.updateCommands().addCommands(
             Commands.slash("about", "General information about the bot"),
