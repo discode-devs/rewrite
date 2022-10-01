@@ -4,6 +4,7 @@ import com.mazylol.discode.commands.frameworks.Angular.angularembed
 import com.mazylol.discode.commands.frameworks.Next.nextembed
 import com.mazylol.discode.commands.frameworks.React.reactembed
 import com.mazylol.discode.commands.frameworks.Svelte.svelteembed
+import com.mazylol.discode.commands.frameworks.SvelteKit.sveltekitembed
 import com.mazylol.discode.commands.frameworks.Vue.vueembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
@@ -24,6 +25,8 @@ class FrameworkDropDown : ListenerAdapter() {
                     .withEmoji(Emoji.fromFormatted("<:framework_react:1007363752997421056>"))
                 ).addOptions(SelectOption.of("Svelte", "svelte")
                     .withEmoji(Emoji.fromFormatted("<:framework_svelte:1013527172289409134>"))
+                ).addOptions(SelectOption.of("SvelteKit", "sveltekit")
+                    .withEmoji(Emoji.fromFormatted("<:framework_svelte:1013527172289409134>"))
                 ).addOptions(SelectOption.of("Vue", "vue")
                     .withEmoji(Emoji.fromFormatted("<:framework_vue:1007363822530605157>"))
                 )
@@ -42,6 +45,7 @@ class FrameworkDropDown : ListenerAdapter() {
             "next" -> nextembed(event)
             "react" -> reactembed(event)
             "svelte" -> svelteembed(event)
+            "sveltekit" -> sveltekitembed(event)
             "vue" -> vueembed(event)
             else -> event.reply("Invalid (somehow)")
         }
