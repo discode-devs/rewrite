@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.0-alpha.19") {
+    implementation("net.dv8tion:JDA:5.0.0-alpha.20") {
         exclude(module = "opus-java")
     }
     implementation("io.github.cdimascio:dotenv-java:2.2.4")
