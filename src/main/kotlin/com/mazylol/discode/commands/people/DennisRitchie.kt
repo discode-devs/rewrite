@@ -8,7 +8,7 @@ object DennisRitchie {
     fun dennisritchieembed(event : SelectMenuInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("Dennis Ritchie")
-        eb.setDescription("An instrumental person to programming!")
+        eb.setDescription("C and Unix God")
         eb.setThumbnail("https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/people/dennisritchie.jpg")
         eb.addField("Overview", "Dennis MacAllistair Ritchie was an American computer scientist. He created the C programming language, and with long-time colleague Ken Thompson, the Unix operating system.", false)
         eb.addField("Life and Death", "Born: September 9, 1941\nDied: October 12, 2011", false)
