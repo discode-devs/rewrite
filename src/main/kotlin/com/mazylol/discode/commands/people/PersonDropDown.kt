@@ -2,6 +2,7 @@ package com.mazylol.discode.commands.people
 
 import com.mazylol.discode.commands.people.AdaLovelace.adalovelaceembed
 import com.mazylol.discode.commands.people.DennisRitchie.dennisritchieembed
+import com.mazylol.discode.commands.people.KenThompson.kenthompsonembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
@@ -17,6 +18,8 @@ class PersonDropDown : ListenerAdapter() {
                     .withEmoji(Emoji.fromFormatted("<:person_adalovelace:1007468964303077416>"))
                 ).addOptions(SelectOption.of("Dennis Ritchie", "dennisritchie")
                     .withEmoji(Emoji.fromFormatted("<:person_dennisritchie:1007469018984218655>"))
+                ).addOptions(SelectOption.of("Ken Thompson", "kenthompson")
+                    .withEmoji(Emoji.fromFormatted("<:person_kenthompson:insert-id-here>"))
                 )
                 .build()
 
@@ -31,6 +34,7 @@ class PersonDropDown : ListenerAdapter() {
         when(event.values[0]) {
             "adalovelace" -> adalovelaceembed(event)
             "dennisritchie" -> dennisritchieembed(event)
+            "kenthompson" -> kenthompsonembed(event)
             else -> event.reply("Invalid (somehow)")
         }
     }
