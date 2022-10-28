@@ -11,7 +11,7 @@ object KenThompson {
         eb.setDescription("B, Unix, and Go God")
         eb.setThumbnail("https://raw.githubusercontent.com/discode-devs/rewrite/master/src/main/resources/images/people/kenthompson.png")
         eb.addField("Oveview", "Kenneth Lane Thompson is an American computer scientist. He designed and implemented the original Unix operating system. He also create the B language which was the predecessor to C. Since 2006 he has worked at Google where he has co-developed the Go programming language.", false)
-        eb.addField("Life and Death", "Born: Feburary 4, 1943\nDied: -", false)
+        eb.addField("Life and Death", "Born: Feburary 4, 1943\nDied: N/A", false)
         eb.addField("Sources", "https://en.wikipedia.org/wiki/Ken_Thompson", false)
         eb.setTimestamp(Date().toInstant())
         eb.setColor(5793266)

@@ -19,7 +19,7 @@ class PersonDropDown : ListenerAdapter() {
                 ).addOptions(SelectOption.of("Dennis Ritchie", "dennisritchie")
                     .withEmoji(Emoji.fromFormatted("<:person_dennisritchie:1007469018984218655>"))
                 ).addOptions(SelectOption.of("Ken Thompson", "kenthompson")
-                    .withEmoji(Emoji.fromFormatted("<:person_kenthompson:insert-id-here>"))
+                    .withEmoji(Emoji.fromFormatted("<:person_kenthompson:1035666250547855501>"))
                 )
                 .build()
 
