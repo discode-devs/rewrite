@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.people
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object AdaLovelace {
-    fun adalovelaceembed(event : SelectMenuInteractionEvent) {
+    fun adalovelaceembed(event : StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("Ada Lovelace")
         eb.setDescription("While not a language, still very very important to programming as a whole.")

@@ -5,15 +5,15 @@ import com.mazylol.discode.commands.people.DennisRitchie.dennisritchieembed
 import com.mazylol.discode.commands.people.KenThompson.kenthompsonembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import net.dv8tion.jda.api.interactions.components.selections.SelectMenu
 import net.dv8tion.jda.api.interactions.components.selections.SelectOption
+import net.dv8tion.jda.api.interactions.components.selections.StringSelectMenu
 
 class PersonDropDown : ListenerAdapter() {
     override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
         if (event.name == "person") {
-            val selectMenu = SelectMenu.create("choose-language")
+            val selectMenu = StringSelectMenu.create("choose-language")
                 .addOptions(SelectOption.of("Ada Lovelace", "adalovelace")
                     .withEmoji(Emoji.fromFormatted("<:person_adalovelace:1007468964303077416>"))
                 ).addOptions(SelectOption.of("Dennis Ritchie", "dennisritchie")
@@ -30,7 +30,7 @@ class PersonDropDown : ListenerAdapter() {
         }
     }
 
-    override fun onSelectMenuInteraction(event: SelectMenuInteractionEvent) {
+    override fun onStringSelectInteraction(event: StringSelectInteractionEvent) {
         when(event.values[0]) {
             "adalovelace" -> adalovelaceembed(event)
             "dennisritchie" -> dennisritchieembed(event)

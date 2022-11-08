@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.langs
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object PHP {
-    fun phpembed(event : SelectMenuInteractionEvent) {
+    fun phpembed(event : StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("PHP")
         eb.setDescription("Make websites go brrr, with added pain.")

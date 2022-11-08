@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.frameworks
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object React {
-    fun reactembed(event : SelectMenuInteractionEvent) {
+    fun reactembed(event : StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("React")
         eb.setDescription("Facebook's attempt to do something good.")

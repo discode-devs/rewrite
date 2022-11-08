@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.frameworks
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object Svelte {
-    fun svelteembed(event: SelectMenuInteractionEvent) {
+    fun svelteembed(event: StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("Svelte")
         eb.setDescription("The framework of champions!")

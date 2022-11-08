@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.langs
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object C {
-    fun cembed(event: SelectMenuInteractionEvent) {
+    fun cembed(event: StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("C")
         eb.setDescription("The grandfather of everything else.")

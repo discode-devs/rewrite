@@ -13,15 +13,15 @@ import com.mazylol.discode.commands.langs.Kotlin.kotlinembed
 import com.mazylol.discode.commands.langs.PHP.phpembed
 import net.dv8tion.jda.api.entities.emoji.Emoji
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import net.dv8tion.jda.api.interactions.components.selections.SelectMenu
 import net.dv8tion.jda.api.interactions.components.selections.SelectOption
+import net.dv8tion.jda.api.interactions.components.selections.StringSelectMenu
 
 class LangDropDown : ListenerAdapter() {
     override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
         if (event.name == "language") {
-            val selectMenu = SelectMenu.create("choose-language")
+            val selectMenu = StringSelectMenu.create("choose-language")
                 .addOptions(SelectOption.of("Assembly", "asm")
                     .withEmoji(Emoji.fromFormatted("<:lang_asm:1006662018083856447>"))
                 ).addOptions(SelectOption.of("BASIC", "basic")
@@ -54,7 +54,7 @@ class LangDropDown : ListenerAdapter() {
         }
     }
 
-    override fun onSelectMenuInteraction(event: SelectMenuInteractionEvent) {
+    override fun onStringSelectInteraction(event: StringSelectInteractionEvent) {
         when(event.values[0]) {
             "asm" -> asmembed(event)
             "basic" -> basicembed(event)

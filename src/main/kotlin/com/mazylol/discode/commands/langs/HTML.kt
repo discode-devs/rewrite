@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.langs
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object HTML {
-    fun htmlembed(event : SelectMenuInteractionEvent) {
+    fun htmlembed(event : StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("HTML")
         eb.setDescription("What you see.")

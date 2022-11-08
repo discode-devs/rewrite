@@ -1,11 +1,11 @@
 package com.mazylol.discode.commands.frameworks
 
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent
 import java.util.Date
 
 object Next {
-    fun nextembed(event : SelectMenuInteractionEvent) {
+    fun nextembed(event : StringSelectInteractionEvent) {
         val eb = EmbedBuilder()
         eb.setTitle("Next")
         eb.setDescription("React on steroids.")
