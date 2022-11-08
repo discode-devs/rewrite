@@ -9,12 +9,15 @@ plugins {
 group = "com.mazylol.discode"
 version = "1.4"
 
+val jdaVersion = "5.0.0-alpha.22"
+
 repositories {
     mavenCentral()
+    maven("https://m2.dv8tion.net/releases")
 }
 
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.0-alpha.22") {
+    implementation("net.dv8tion:JDA:$jdaVersion") {
         exclude(module = "opus-java")
     }
     implementation("io.github.cdimascio:dotenv-java:2.2.4")
