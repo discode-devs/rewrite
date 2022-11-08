@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.mazylol.discode"
-version = "1.4"
+version = "1.4.1"
 
 val jdaVersion = "5.0.0-alpha.22"
 
