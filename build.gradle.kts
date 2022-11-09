@@ -28,6 +28,14 @@ application {
     mainClass.set("com.mazylol.discode.DiscordBot")
 }
 
+distributions {
+    main {
+        contents {
+            from(".env")
+        }
+    }
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
