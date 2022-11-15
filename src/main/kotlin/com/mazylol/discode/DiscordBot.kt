@@ -5,7 +5,7 @@ import com.mazylol.discode.commands.info.About
 import com.mazylol.discode.commands.info.Help
 import com.mazylol.discode.commands.langs.LangDropDown
 import com.mazylol.discode.commands.people.PersonDropDown
-import io.github.cdimascio.dotenv.Dotenv
+import io.github.cdimascio.dotenv.dotenv
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.interactions.commands.build.Commands
@@ -15,8 +15,8 @@ object DiscordBot {
     @Throws(LoginException::class, InterruptedException::class, Exception::class)
     @JvmStatic
     fun main(args: Array<String>) {
-        val dotenv = Dotenv.configure().load()
-        val bot = JDABuilder.createDefault(dotenv.get("DEVTOKEN"))
+        val dotenv = dotenv()
+        val bot = JDABuilder.createDefault(dotenv["DEVTOKEN"])
             .setActivity(Activity.watching("you copy/paste"))
             .addEventListeners(About(), FrameworkDropDown(), Help(), LangDropDown(), PersonDropDown())
             .build().awaitReady()

@@ -20,7 +20,7 @@ dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion") {
         exclude(module = "opus-java")
     }
-    implementation("io.github.cdimascio:dotenv-java:2.2.4")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.3.1")
     implementation("ch.qos.logback:logback-classic:1.4.4")
 }
 
