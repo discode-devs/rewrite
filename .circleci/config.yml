@@ -1,9 +1,9 @@
 version: 2.1
 
-orbs:
-  gradle: circleci/gradle@3.0.0
-
-workflows:
-  checkout-build:
-    jobs:
-      - gradle/build
+jobs:
+  build:
+    docker:
+      - image: cimg/openjdk:19.0.1
+    steps:
+      - checkout
+      - run: gradle build
