@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "gradle",
+            "name": "run",
+            "tasks": [
+                "run"
+            ],
+        },
+        {
+            "type": "gradle",
+            "name": "build",
+            "tasks": [
+                "build"
+            ]
+        },
+        {
+            "type": "gradle",
+            "name": "clean",
+            "tasks": [
+                "clean"
+            ],
+        },
+    ]
+}
