@@ -21,7 +21,7 @@ dependencies {
         exclude(module = "opus-java")
     }
     implementation("io.github.cdimascio:dotenv-kotlin:6.3.1")
-    implementation("ch.qos.logback:logback-classic:1.4.4")
+    implementation("ch.qos.logback:logback-classic:1.4.5")
 }
 
 application {
