@@ -6,4 +6,14 @@ jobs:
       - image: cimg/openjdk:19.0.1
     steps:
       - checkout
-      - run: gradle build
+      - run:
+          name: Gradle build
+          command: gradle build
+      - run:
+          name: Add Build Artifacts
+          command: |
+            mkdir /tmp/artifacts
+            cp -r build/distributions /tmp/artifacts
+            cp -r build/libs /tmp/artifacts
+      - store_artifacts:
+          path: /tmp/artifacts
