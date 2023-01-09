@@ -16,7 +16,7 @@ object DiscordBot {
     @JvmStatic
     fun main(args: Array<String>) {
         val dotenv = dotenv()
-        val bot = JDABuilder.createDefault(dotenv["DEVTOKEN"])
+        val bot = JDABuilder.createDefault(dotenv["TOKEN"])
             .setActivity(Activity.watching("you copy/paste"))
             .addEventListeners(About(), FrameworkDropDown(), Help(), LangDropDown(), PersonDropDown())
             .build().awaitReady()

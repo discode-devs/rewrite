@@ -20,7 +20,7 @@ dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion") {
         exclude(module = "opus-java")
     }
-    implementation("io.github.cdimascio:dotenv-kotlin:6.3.1")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.0")
     implementation("ch.qos.logback:logback-classic:1.4.5")
 }
 
@@ -31,7 +31,9 @@ application {
 distributions {
     main {
         contents {
-            from(".env")
+            from(".env") {
+                into("bin")
+            }
         }
     }
 }
